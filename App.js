@@ -1,28 +1,13 @@
+import React from "react";
+import { ReactDOM } from "react-dom/client";
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 
-/**
- * <div class='container'>
- *    <div id='child'>
- *       <h1>First Child</h1> 
- *    </div>
- *    <div id='child-2'>
- *       <h3>hello</h3> 
- *    </div>
- * </div>
- *  
- *  React object to  => browser understands html tags
- */
+// React.createElement() => Object => HTMLElement(renderComponent);
 
-const parent = React.createElement("div", { className: "container:"}, [
-    React.createElement("div", { id: "child"}, React.createElement("h1", {},'First Child')),
-    React.createElement("div", { id: "child-2"}, React.createElement("h3", {},'hello')),
-]);
+const heading = React.createElement("h1", { id: "heading"}, 'heading');
 
-console.log('object', parent);
+// JSX (transpiled before it reaches the js) - PARCEL - Babel
 
-const root = document.getElementById('root');
-const render = ReactDOM.createRoot(root)
-
-render.render(parent);
+// JSX => React.createElement() => Object => HTMLElement(renderComponent)
+const jsxHeading = <h1 id="id">JSX heading :rocket:</h1>
+ 
